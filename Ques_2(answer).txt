@@ -1,0 +1,21 @@
+<script>
+  document.write("Find the maximum consecutive 1's in an array of 0's and 1's in array = [0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1] :<br><br>");
+  document.write("Answer :<br><br>");
+  var findMaxConsOnes = function() {
+    let array = [0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1];
+    let maxCount = 0;
+    let currCount = 0;
+    for (let i = 0; i<array.length; i++) {
+        if (array[i] === 0) {
+            currCount = 0;
+        } else {
+            currCount++;
+        };
+        if (currCount > maxCount){
+        maxCount = currCount;
+      }
+    };
+    document.write(maxCount);
+};
+findMaxConsOnes();
+</script>
